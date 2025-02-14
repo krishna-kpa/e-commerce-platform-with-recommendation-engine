@@ -1,0 +1,41 @@
+.idea
+# Ignore general target and build directories
+target/
+!**/src/main/**/target/
+!**/src/test/**/target/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+# Ignore Maven Wrapper except for required JAR
+!.mvn/wrapper/maven-wrapper.jar
+
+# Ignore IDE-specific files
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### VS Code ###
+.vscode/
+
+**/mvnw
+**/mvnw.cmd
+**/.mvn
