@@ -5,6 +5,8 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import static com.kp.config_server.constant.ConfigurationPropertyConstant.E_COM_CONFIGURATION_GREETINGS_MESSAGE;
 
@@ -18,6 +20,7 @@ import static com.kp.config_server.constant.ConfigurationPropertyConstant.E_COM_
 @Slf4j
 @Service
 @RequiredArgsConstructor
+@RequestMapping("config/v1")
 public class ConfigurationServiceImpl implements ConfigurationService {
 
     @Value(E_COM_CONFIGURATION_GREETINGS_MESSAGE)
@@ -27,6 +30,7 @@ public class ConfigurationServiceImpl implements ConfigurationService {
      * This method is used for getting greetings message.
      * @return String - greetings message
      */
+    @GetMapping("/greetings")
     @Override
     public String getGreetingsMessage() {
         log.info("[+] Method Invoked : getGreetingsMessage() : ");
